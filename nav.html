@@ -16,7 +16,7 @@
         font-size: 30px;
         text-transform: capitalize;
     }
-    
+
     .wrapper button {
         margin-bottom: 25px;
         width: 300px;
@@ -30,31 +30,67 @@
         <a href="index.html" style="display: block; margin-bottom: 20px;">
             Главная
         </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Каталог
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Товар
+        </a>
+        <a href="zapchasti.html" style="display: block; margin-bottom: 20px;">
+            Запчасти
+        </a>
 
 
 
 
-        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="consultModal">
             Быстрый заказ
         </button>
 
     </div>
 
-    <div class="modal" id="quickOrder" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal" id="consultModal">
+    <div class="modal__dialog">
         <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55401 10.5L2 2.94599L2.94599 2L10.5 9.55401L18.054 2L19 2.94599L11.446 10.5L19 18.054L18.054 19L10.5 11.446L2.94599 19L2 18.054L9.55401 10.5Z" fill="#333333"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"  viewBox="0 0 16 16">
+                <path fill-rule="evenodd"  fill="#000000"  d="M8.0,6.5858 C8.0,6.5858 12.949951,1.6355438 12.949951,1.6355438 C12.949951,1.6355438 14.363892,3.049591 14.363892,3.049591 C14.363892,3.049591 9.41394,7.9998474 9.41394,7.9998474 C9.41394,7.9998474 14.363892,12.94957 14.363892,12.94957 C14.363892,12.94957 12.949951,14.363617 12.949951,14.363617 C12.949951,14.363617 8.0,9.41391 8.0,9.41391 C8.0,9.41391 3.0499268,14.363617 3.0499268,14.363617 C3.0499268,14.363617 1.6359863,12.94957 1.6359863,12.94957 C1.6359863,12.94957 6.5859375,7.9998474 6.5859375,7.9998474 C6.5859375,7.9998474 1.6359863,3.049591 1.6359863,3.049591 C1.6359863,3.049591 3.0499268,1.6355438 3.0499268,1.6355438 C3.0499268,1.6355438 8.0,6.5858 8.0,6.5858 Z"/>
             </svg>
         </button>
 
+        <h3 class="modal__title display1">Оставьте заявку</h3>
+        <p class="modal__desc body-text">и наши менеджеры свяжутся с Вами в течении 30 минут!</p>
 
-
+        <form action="" class="modal__form">
+            <fieldset class="fg">
+                <input type="text" placeholder="Ваше имя">
+            </fieldset>
+            <fieldset class="fg">
+                <input type="tel" placeholder="Ваш телефон">
+            </fieldset>
+            <fieldset class="fg">
+                <input type="email" placeholder="Ваш email">
+            </fieldset>
+            <fieldset class="fg fg--text">
+                <textarea placeholder="Ваше сообщение"></textarea>
+            </fieldset>
+            <div class="modal__check m-check">
+                <input checked type="checkbox">
+                <label>
+                    <span>
+                        Нажимая на кнопку “Отправить” вы соглашаетесь с
+                        <a href="">политикой конфиденциальности</a>
+                    </span>
+                </label>
+            </div>
+            <button class="modal__btn m-btn m-btn-primary">
+                Отправить
+            </button>
+        </form>
     </div>
 </div>
 
 
-<!-- <div class="modal-backdrop show"></div> -->
+
     <!--  -->
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
